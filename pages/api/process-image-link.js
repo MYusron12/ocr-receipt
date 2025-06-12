@@ -106,8 +106,6 @@ function parseStrukText(rawText) {
       // Coba ambil baris-baris setelah 'BCA' sebagai nama merchant
       for (let j = bcaIndex + 1; j < lines.length; j++) {
         let potentialName = lines[j].trim();
-        // Regex untuk mengidentifikasi pola yang TIDAK BOLEH menjadi nama merchant.
-        // Fokus pada ID transaksi, nomor telepon, string yang sangat pendek, atau simbol.
         const excludePatterns = new RegExp(
           '^(JL\\.?|RT\\.?|RW\\.?|KEC\\.?|KOTA|BLOK|NO\\.?|ACT\\.?|TANGGAL|WAKTU|MID|TERM#|MERC#|DATE|TIME|BATCH|TRACE|REF\\.NO|APPR\\.CODE|\\d{10,}|C[0-9]{2}D[0-9]{4}|\\*+|SIGNATURE NOT REQUIRED|Cardholder Copy|Merchant Copy|[\\d\\s\\W]{0,3}$)',
           'i' // Case-insensitive

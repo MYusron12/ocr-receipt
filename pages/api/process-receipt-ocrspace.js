@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     }
 
     // Ambil API Key dari environment variable dengan aman
-    const apiKey = process.env.OCR_SPACE_API_KEY;
+    const apiKey = 'K84881763088957';
     if (!apiKey) {
         return res.status(500).json({ error: 'OCR.space API key is not configured.' });
     }
