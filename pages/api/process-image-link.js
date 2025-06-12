@@ -23,7 +23,7 @@ export default async function handler(req, res) {
   }
 
   // Ambil API Key dari variabel lingkungan
-  const OCR_SPACE_API_KEY = process.env.OCR_SPACE_API_KEY;
+  const OCR_SPACE_API_KEY = 'K84881763088957';
 
   if (!OCR_SPACE_API_KEY) {
     console.error('OCR_SPACE_API_KEY is not set in .env.local');
